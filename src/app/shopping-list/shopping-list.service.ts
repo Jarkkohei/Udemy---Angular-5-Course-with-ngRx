@@ -15,18 +15,6 @@ export class ShoppingListService {
     return this.ingredients[index];
   }
 
-  addIngrediets(ingredients: Ingredient[]) {
-    /*
-    for(let ingredient of ingredients) {
-      this.ingredients.push(ingredient);
-    }
-    */
-
-    //  "..." = ES6 spread-operator
-    this.ingredients.push(...ingredients);
-    this.ingredientsChanged.next(this.ingredients.slice());
-  }
-
   updateIngredient(index: number, newIngredient: Ingredient) {
     this.ingredients[index] = newIngredient;
     this.ingredientsChanged.next(this.ingredients.slice());

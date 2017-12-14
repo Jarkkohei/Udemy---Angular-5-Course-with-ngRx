@@ -11,20 +11,8 @@ export class ShoppingListService {
     new Ingredient('Tomatoes', 10)
   ];
 
-  getIngredients() {
-    //  Return a COPY of the ingredients-array.
-    return this.ingredients.slice();
-
-    //return this.ingredients;
-  }
-
   getIngredient(index: number) {
     return this.ingredients[index];
-  }
-
-  addIngredient(ingredient: Ingredient) {
-    this.ingredients.push(ingredient);
-    this.ingredientsChanged.next(this.ingredients.slice());
   }
 
   addIngrediets(ingredients: Ingredient[]) {

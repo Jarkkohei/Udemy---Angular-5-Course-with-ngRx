@@ -12,6 +12,7 @@ import * as fromShoppingList from '../../shopping-list/store/shopping-list.reduc
   templateUrl: './recipe-detail.component.html',
   styleUrls: ['./recipe-detail.component.css']
 })
+
 export class RecipeDetailComponent implements OnInit {
   recipe: Recipe;
   id: number;

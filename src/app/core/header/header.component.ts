@@ -6,6 +6,7 @@ import { Store } from '@ngrx/store';
 import * as fromApp from '../../store/app.reducers';
 import * as fromAuth from '../../auth/store/auth.reducers';
 import { Observable } from 'rxjs/Observable';
+//import { HttpEvent, HttpEventType } from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
@@ -27,7 +28,7 @@ export class HeaderComponent implements OnInit {
   onSaveData() {
     this.dataStorageService.storeRecipes()
       .subscribe(
-        (response: Response) => {
+        (response: HttpEvent<Object>) => {
           console.log(response);
         }
       );

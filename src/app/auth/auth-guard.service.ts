@@ -9,9 +9,7 @@ import * as fromAuth from './store/auth.reducers';
 @Injectable()
 export class AuthGuard implements CanActivate {
 
-  constructor(private store: Store<fromApp.AppState>) {
-
-  }
+  constructor(private store: Store<fromApp.AppState>) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     return this.store.select('auth').map((authState: fromAuth.State) => {
